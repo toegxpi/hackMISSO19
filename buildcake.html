@@ -25,180 +25,119 @@
     </ul>
   </nav>
 </header>
+
 <body>
+  <div class = "buildCake">
     <div class = "buildFlavor">
-        Flavor: <br>
-        <input type="radio" name="flavor" value="Chocolate"> Chocolate<br>
-        <input type="radio" name="flavor" value="Vanilla"> Vanilla<br>
-        <input type="radio" name="flavor" value="Strawberry"> Strawberry<br>
-        <button type="button" onclick="displayFlavorValue()"> Submit </button>
-      <div id = "result"></div>
-    
-
-      <script class = "flavorDisplay">
-          function displayFlavorValue()
-          {
-              var flavor = document.getElementsByName("flavor");
-
-              for(i=0;i<flavor.length;i++)
-              {
-                if(flavor[i].checked)
-                document.getElementById("result").innerHTML = "Flavor: "+ flavor[i].value;
-              }
-          }
-      </script>
-        </div>
-        
-      <div class = "buildTier">
-          Tier Level: <br>
-          <input type="radio" name="tier" value="1"> 1<br>
-          <input type="radio" name="tier" value="2"> 2<br>
-          <input type="radio" name="tier" value="3"> 3<br>
-          <input type="radio" name="tier" value="4"> 4<br>
-          <button type="button" onclick="displayTierValue()"> Submit </button>
-        <div id = "result"></div>
+      Flavor: <br>
+      <input type="radio" name="flavor" value="Chocolate"> Chocolate<br>
+      <input type="radio" name="flavor" value="Vanilla"> Vanilla<br>
+      <input type="radio" name="flavor" value="Strawberry"> Strawberry<br>
       </div>
 
-      <script class = "tierDisplay">
-        function displayTierValue()
-        {
-            var tier = document.getElementsByName("tier");
+    <div class = "buildTier">
+      Tier Level: <br>
+        <input type="radio" name="tier" value="1"> 1<br>
+        <input type="radio" name="tier" value="2"> 2<br>
+        <input type="radio" name="tier" value="3"> 3<br>
+        <input type="radio" name="tier" value="4"> 4<br>
+    </div>
+    
+    <div class = "buildShape">
+        Shape: <br>
+        <input type="radio" name="shape" value="Circle"> Circle<br>
+        <input type="radio" name="shape" value="Square"> Square<br>
+        <input type="radio" name="shape" value="Triangle"> Triangle<br>
+        <input type="radio" name="shape" value="Alphabet Letter"> Alphabet Letter<br>
+        <input type="radio" name="shape" value="Number"> Number<br>
+</div>
 
-            for(i=0;i<tier.length;i++)
+    <div class = "buildFrost">
+        Frost: <br>
+        <input type="radio" name="frost" value="Cream Cheese"> Cream Cheese<br>
+        <input type="radio" name="frost" value="Buttercream"> Buttercream<br>
+        <input type="radio" name="frost" value="Ganache"> Ganache<br>
+</div>
+
+    <div class = "buildTop">
+        Toppings: <br>
+        <input type="radio" name="top" value="Sprinkles"> Sprinkles<br>
+        <input type="radio" name="top" value="Fruit Loops"> Fruit Loops<br>
+        <input type="radio" name="top" value="Candy"> Candy <br>
+        <input type="radio" name="top" value="Fresh Fruit"> Fresh Fruit <br>
+</div>
+
+    <div class = "buildSize">
+        Diameter: <br>
+        <input type="radio" name="size" value="6"> 6 inches <br>
+        <input type="radio" name="size" value="8"> 8 inches <br>
+        <input type="radio" name="size" value="10"> 10 inches <br>
+</div>
+
+      <button id="buttonOrder" onclick="displayCakeOrder()"> Click Here to See Order </button>
+    <div id = "result">Order: </div>
+  
+    <script class = "cakeOrder">
+      function displayCakeOrder()
+      {
+        var flavor = document.getElementsByName("flavor");
+        var tier   = document.getElementsByName("tier");
+        var shape  = document.getElementsByName("shape");
+        var frost  = document.getElementsByName("frost");
+        var top    = document.getElementsByName("top");
+        var size   = document.getElementsByName("size");
+
+        var order = "";
+
+        for(i=0;i<flavor.length;i++)
+            {
+              if(flavor[i].checked)
+              order += "Flavor: " + flavor[i].value + "<br>";
+            }
+
+        for(i=0;i<tier.length;i++)
             {
               if(tier[i].checked)
-              document.getElementById("result").innerHTML = "Tier: "+ tier[i].value;
+              order += "Tier: " + tier[i].value + "<br>";
             }
-        }
-    </script>
 
-<div class = "buildShape">
-    Shape: <br>
-    <input type="radio" name="shape" value="Circle"> Circle<br>
-    <input type="radio" name="shape" value="Square"> Square<br>
-    <input type="radio" name="shape" value="Triangle"> Triangle<br>
-    <input type="radio" name="shape" value="Alphabet Letter"> Alphabet Letter<br>
-    <input type="radio" name="shape" value="Number"> Number<br>
-    <button type="button" onclick="displayShapeValue()"> Submit </button>
-  <div id = "result"></div>
-</div>
+        for(i=0;i<shape.length;i++)
+            {
+              if(shape[i].checked)
+              order += "Shape: " + shape[i].value + "<br>";
+            }
 
-<script class = "shapeDisplay">
-  function displayShapeValue()
-  {
-      var shape = document.getElementsByName("shape");
+        for(i=0;i<frost.length;i++)
+            {
+              if(frost[i].checked)
+              order += "Frost: " + frost[i].value + "<br>";
+            }
 
-      for(i=0;i<shape.length;i++)
-      {
-        if(shape[i].checked)
-        document.getElementById("result").innerHTML = "Shape: "+ shape[i].value;
+        for(i=0;i<top.length;i++)
+            {
+              if(top[i].checked)
+              order += "Top: " + top[i].value + "<br>";
+            }
+
+        for(i=0;i<size.length;i++)
+            {
+              if(size[i].checked)
+              order += "Size: " + size[i].value + "<br>";
+            }
+          
+        document.getElementById("result").innerHTML = order;
       }
-  }
-</script>
-
-<div class = "buildFrost">
-    Frost: <br>
-    <input type="radio" name="frost" value="Cream Cheese"> Cream Cheese<br>
-    <input type="radio" name="frost" value="Buttercream"> Buttercream<br>
-    <input type="radio" name="frost" value="Ganache"> Ganache<br>
-    <button type="button" onclick="displayFrostValue()"> Submit </button>
-  <div id = "result"></div>
-</div>
-
-<script class = "frostDisplay">
-  function displayFrostValue()
-  {
-      var frost = document.getElementsByName("frost");
-
-      for(i=0;i<frost.length;i++)
-      {
-        if(frost[i].checked)
-        document.getElementById("result").innerHTML = "Frosting: "+ frost[i].value;
-      }
-  }
-</script>
-
-<div class = "buildTop">
-    Toppings: <br>
-    <input type="radio" name="top" value="Sprinkles"> Sprinkles<br>
-    <input type="radio" name="top" value="Fruit Loops"> Fruit Loops<br>
-    <input type="radio" name="top" value="Candy"> Candy <br>
-    <input type="radio" name="top" value="Fresh Fruit"> Fresh Fruit <br>
-    <button type="button" onclick="displayTopValue()"> Submit </button>
-  <div id = "result"></div>
-</div>
-
-<script class = "topDisplay">
-  function displayTopValue()
-  {
-      var top = document.getElementsByName("top");
-
-      for(i=0;i<top.length;i++)
-      {
-        if(top[i].checked)
-        document.getElementById("result").innerHTML = "Toppings: "+ top[i].value;
-      }
-  }
-</script>
-
-<div class = "buildSize">
-    Diameter: <br>
-    <input type="radio" name="size" value="6"> 6 inches <br>
-    <input type="radio" name="size" value="8"> 8 inches <br>
-    <input type="radio" name="size" value="10"> 10 inches <br>
-    <button type="button" onclick="displaySizeValue()"> Submit </button>
-  <div id = "result"></div>
-</div>
-
-<script class = "sizeDisplay">
-  function displaySizeValue()
-  {
-      var size = document.getElementsByName("size");
-
-      for(i=0;i<size.length;i++)
-      {
-        if(size[i].checked)
-        document.getElementById("result").innerHTML = "Diameter: "+ top[i].value;
-      }
-  }
-</script>
-
-<div class = "buildSize">
-    Diameter: <br>
-    <input type="radio" name="size" value="6"> 6 inches <br>
-    <input type="radio" name="size" value="8"> 8 inches <br>
-    <input type="radio" name="size" value="10"> 10 inches <br>
-    <button type="button" onclick="displaySizeValue()"> Submit </button>
-  <div id = "result"></div>
-</div>
-
-<script class = "sizeDisplay">
-  function displaySizeValue()
-  {
-      var size = document.getElementsByName("size");
-
-      for(i=0;i<size.length;i++)
-      {
-        if(size[i].checked)
-        document.getElementById("result").innerHTML = "Diameter: "+ size[i].value;
-      }
-  }
-</script>
+    </script></div>
 
 <div class = "email">
     <form>
         <p> To recieve an order confirmation, enter your email </p>
         <label for="Email"> Email: </label><br>
         <input type="text" id="email"><br>
-        <button type="button" onclick="displayMessage()"> Submit </button>
-        <div id = "result"></div>
+        
+        <a href = "thankyou.html" class="btn btn-info" role="button">Submit</a>
+        <div id = "message"> Message: </div>
       </form>
-      
-      <script>
-          function displayMessage(){
-              document.getElementById("result").innerHTML = "An order confirmation was sent to your email!";
-          }
-      </script>
 </div>
     
   </body>

@@ -17,10 +17,12 @@ h1{
     margin-top: 10px;
     font-family: 'Delius Unicase', cursive;
     color: white;
+    top: 5px;
+    left: 10px;
 }
 
 span{
-    color: plum;
+    color: lightcoral;
 }
 
 ul{
@@ -62,14 +64,19 @@ div.about{
     color:royalblue;
 }
 
+div.buildCake{
+    background-color: lightcoral;
+}
+
 div.buildFlavor{
     position: absolute;
-    padding: 3px;
+    padding: 10px;
     float: left;
     margin-left: 2%;
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
+    background-color: paleturquoise;
 }
 
 div.buildTier{
@@ -79,7 +86,8 @@ div.buildTier{
     margin-left: 15%;
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
-    color:royalblue;
+    color:royalblue; 
+    background-color: paleturquoise;
 }
 
 div.buildShape{
@@ -90,6 +98,7 @@ div.buildShape{
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
+    background-color: paleturquoise;
 }
 
 div.buildFrost{
@@ -100,6 +109,7 @@ div.buildFrost{
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
+    background-color: paleturquoise;
 }
 
 div.buildTop{
@@ -110,6 +120,7 @@ div.buildTop{
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
+    background-color: paleturquoise;
 }
 
 div.buildSize{
@@ -120,14 +131,194 @@ div.buildSize{
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
+    background-color: paleturquoise;
 }
 
 div.email{
     position: absolute;
     padding: 3px;
     float: left;
-    margin-left: 300px;
-    margin-top: 300px;
+    margin-left: 450px;
+    margin-top: 200px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
+    background-color: salmon;
 }
+
+div.splash{
+    position: fixed;
+    background: black;
+  
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+    font-family: 'Delius Unicase', cursive;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+h1.fade-in{
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.buildGallery{
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color:lightcoral;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  div.quote{
+      padding: 3px;
+      text-align: center;
+      background-color: lightcoral;
+      width: 100%;
+      height: 100%;
+      color:mediumturquoise;
+      font-family: 'Delius Unicase', cursive;
+      font-size: xx-large;
+  }
+
+  #buttonOrder{
+    background-color: white;
+    padding: 3px;
+    margin-top: 180px;
+    margin-left: 580px;
+    text-align: center;
+    font-family: 'Delius Unicase', cursive;
+  }
+
+  #buttonMessage{
+    background-color:white;
+    padding: 3px;
+    margin-top: 3px;
+    text-align: center;
+    font-family: 'Delius Unicase', cursive;
+  }
+  
+  #result{
+    padding: 3px;
+    text-align: center;
+    margin-top: 50px;
+    background-color: lightcoral;
+    color:mediumturquoise;
+    font-family: 'Delius Unicase', cursive;
+    font-size: xx-large;
+  }
+
+  #message{
+    padding: 3px;
+    text-align: left;
+    background-color: lightcoral;
+    width: 100%;
+    height: 100%;
+    color:mediumturquoise;
+    font-family: 'Delius Unicase', cursive;
+    font-size: large;
+  }
+
+  div.thanks{
+    padding: 3px;
+    text-align: left;
+    background-color: lightcoral;
+    width: 100%;
+    height: 100%;
+    color:mediumturquoise;
+    font-family: 'Delius Unicase', cursive;
+    font-size: large;
+  }
+
+  
+
+  
