@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="C:\Users\igrac\OneDrive\Documents\GitHub\hackMISSO19\styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 </head>
 <header>
     <h1>EMaJJ<span>cakesHop</span></h1>
@@ -28,6 +28,8 @@
 
 <body>
   <div class = "buildCake">
+    <h1 class = "cakeHeader"> Build your cake by choosing one of each option <br><b>
+    OR </b>you can choose from our Specialty Cake form </h1>
     <div class = "buildFlavor">
       Flavor: <br>
       <input type="radio" name="flavor" value="Chocolate"> Chocolate<br>
@@ -74,10 +76,24 @@
         <input type="radio" name="size" value="10"> 10 inches <br>
 </div>
 
+    <div class = "SpecialtyOrder">
+        Special Cake: (you can click <a href = "gallery.html">here </a>to view the cake gallery) <br>
+        <input type="radio" name="cake" value="Vanilla Chocolate Strawberry"> Vanilla Chocolate Strawberry <br>
+        <input type="radio" name="cake" value="Strawberry Shortcake"> Strawberry Shortcake <br>
+        <input type="radio" name="cake" value="Floral Vanilla"> Floral Vanilla <br>
+        <input type="radio" name="cake" value="Chocolate Shortcake"> Chocolate Shortcake <br>
+        <input type="radio" name="cake" value="Raspberry Vanilla"> Raspberry Vanilla <br>
+        <input type="radio" name="cake" value="Chocolate Candies"> Chocolate Candies <br>
+    </div>
+
       <button id="buttonOrder" onclick="displayCakeOrder()"> Click Here to See Order </button>
+      <button id="resetButton" onclick="resetButton()"> Clear Order Form Here </button>
     <div id = "result"></div>
   
     <script class = "cakeOrder">
+      function resetButton(){
+        location.reload();
+      }
       function displayCakeOrder()
       {
         var flavor = document.getElementsByName("flavor");
@@ -86,8 +102,14 @@
         var frost  = document.getElementsByName("frost");
         var top    = document.getElementsByName("top");
         var size   = document.getElementsByName("size");
+        var special = document.getElementsByName("cake");
 
         var order = "";
+        for(i=0;i<special.length;i++)
+            {
+              if(special[i].checked)
+              order += "Special Order: " + special[i].value + "<br>";
+            }
 
         for(i=0;i<flavor.length;i++)
             {
@@ -110,13 +132,13 @@
         for(i=0;i<frost.length;i++)
             {
               if(frost[i].checked)
-              order += "Frost: " + frost[i].value + "<br>";
+              order += "Frosting: " + frost[i].value + "<br>";
             }
 
         for(i=0;i<top.length;i++)
             {
               if(top[i].checked)
-              order += "Top: " + top[i].value + "<br>";
+              order += "Topping: " + top[i].value + "<br>";
             }
 
         for(i=0;i<size.length;i++)
