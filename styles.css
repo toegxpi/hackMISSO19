@@ -61,3 +61,73 @@ div.about{
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
 }
+
+div.buildFlavor{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 2%;
+    margin-top: 30px;
+    font-family: 'Delius Unicase', cursive;
+    color:royalblue;
+}
+
+div.buildTier{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 15%;
+    margin-top: 30px;
+    font-family: 'Delius Unicase', cursive;
+    color:royalblue;
+}
+
+div.buildShape{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 30%;
+    margin-top: 30px;
+    font-family: 'Delius Unicase', cursive;
+    color:royalblue;
+}
+
+div.buildFrost{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 45%;
+    margin-top: 30px;
+    font-family: 'Delius Unicase', cursive;
+    color:royalblue;
+}
+
+div.buildTop{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 60%;
+    margin-top: 30px;
+    font-family: 'Delius Unicase', cursive;
+    color:royalblue;
+}
+
+div.buildSize{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 75%;
+    margin-top: 30px;
+    font-family: 'Delius Unicase', cursive;
+    color:royalblue;
+}
+
+div.email{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 300px;
+    margin-top: 300px;
+    font-family: 'Delius Unicase', cursive;
+    color:royalblue;
+}
