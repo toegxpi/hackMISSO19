@@ -72,7 +72,7 @@ div.buildFlavor{
     position: absolute;
     padding: 10px;
     float: left;
-    margin-left: 2%;
+    margin-left:10px;
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
@@ -81,9 +81,9 @@ div.buildFlavor{
 
 div.buildTier{
     position: absolute;
-    padding: 3px;
+    padding: 10px;
     float: left;
-    margin-left: 15%;
+    margin-left: 230px;
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue; 
@@ -92,9 +92,9 @@ div.buildTier{
 
 div.buildShape{
     position: absolute;
-    padding: 3px;
+    padding: 10px;
     float: left;
-    margin-left: 30%;
+    margin-left: 430px;
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
@@ -103,9 +103,9 @@ div.buildShape{
 
 div.buildFrost{
     position: absolute;
-    padding: 3px;
+    padding: 10px;
     float: left;
-    margin-left: 45%;
+    margin-left: 720px;
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
@@ -114,9 +114,9 @@ div.buildFrost{
 
 div.buildTop{
     position: absolute;
-    padding: 3px;
+    padding: 10px;
     float: left;
-    margin-left: 60%;
+    margin-left: 970px;
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
@@ -125,9 +125,9 @@ div.buildTop{
 
 div.buildSize{
     position: absolute;
-    padding: 3px;
+    padding: 10px;
     float: left;
-    margin-left: 75%;
+    margin-left: 1200px;
     margin-top: 30px;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
@@ -135,11 +135,12 @@ div.buildSize{
 }
 
 div.email{
-    position: absolute;
-    padding: 3px;
+    position: center;
+    padding: 10px;
     float: left;
-    margin-left: 450px;
-    margin-top: 200px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
     font-family: 'Delius Unicase', cursive;
     color:royalblue;
     background-color: salmon;
@@ -148,7 +149,6 @@ div.email{
 div.splash{
     position: fixed;
     background: black;
-  
     color: white;
     text-align: center;
     line-height: 90vh;
@@ -260,14 +260,9 @@ h1.fade-in{
   }
 
   div.quote{
-      padding: 3px;
       text-align: center;
-      background-color: lightcoral;
       width: 100%;
       height: 100%;
-      color:mediumturquoise;
-      font-family: 'Delius Unicase', cursive;
-      font-size: xx-large;
   }
 
   #buttonOrder{
@@ -309,14 +304,8 @@ h1.fade-in{
   }
 
   div.thanks{
-    padding: 3px;
-    text-align: left;
-    background-color: lightcoral;
     width: 100%;
     height: 100%;
-    color:mediumturquoise;
-    font-family: 'Delius Unicase', cursive;
-    font-size: large;
   }
 
   

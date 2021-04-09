@@ -75,7 +75,7 @@
 </div>
 
       <button id="buttonOrder" onclick="displayCakeOrder()"> Click Here to See Order </button>
-    <div id = "result">Order: </div>
+    <div id = "result"></div>
   
     <script class = "cakeOrder">
       function displayCakeOrder()
@@ -127,17 +127,19 @@
           
         document.getElementById("result").innerHTML = order;
       }
-    </script></div>
+    </script>
+    
+    <div class = "email">
+      <form>
+          <p> To recieve an order confirmation, enter your email </p>
+          <label for="Email"> Email: </label><br>
+          <input type="text" id="email"><br>
+          
+          <a href = "thankyou.html" class="btn btn-info" role="button">Submit</a>
+        </form>
+  </div>
+  </div>
 
-<div class = "email">
-    <form>
-        <p> To recieve an order confirmation, enter your email </p>
-        <label for="Email"> Email: </label><br>
-        <input type="text" id="email"><br>
-        
-        <a href = "thankyou.html" class="btn btn-info" role="button">Submit</a>
-        <div id = "message"> Message: </div>
-      </form>
-</div>
+
     
   </body>
